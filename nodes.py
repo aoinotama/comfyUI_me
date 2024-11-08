@@ -514,6 +514,7 @@ class CheckpointLoader:
     DEPRECATED = True
 
     def load_checkpoint(self, config_name, ckpt_name):
+        logging.info(f"Load Checkpoint config_name {config_name} ckpt_name {ckpt_name}")
         config_path = folder_paths.get_full_path("configs", config_name)
         ckpt_path = folder_paths.get_full_path_or_raise("checkpoints", ckpt_name)
         return comfy.sd.load_checkpoint(config_path, ckpt_path, output_vae=True, output_clip=True, embedding_directory=folder_paths.get_folder_paths("embeddings"))

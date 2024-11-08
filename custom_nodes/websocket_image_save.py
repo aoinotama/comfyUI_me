@@ -43,3 +43,6 @@ class SaveImageWebsocket:
 NODE_CLASS_MAPPINGS = {
     "SaveImageWebsocket": SaveImageWebsocket,
 }
+
+
+
